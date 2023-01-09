@@ -14,7 +14,7 @@ public class Greet {
 
         int countCorrect = 0;
         while (countCorrect < VALUE_CORRECT_ANSWER) {
-            int rndNum = rndNumber();
+            int rndNum = (int) (Math.random() * 100);
             System.out.println("Question: " + rndNum);
             String answer = answerQuestions();
             System.out.println("Your answer: " + answer);
@@ -39,13 +39,6 @@ public class Greet {
         }
     }
 
-    //    private static boolean questionGreet(String answer, int rndNum) {
-//        if (responseCheck(rndNum, answer)) {
-//            return true;
-//        } else {
-//            return false;
-//        }
-//    }
     private static boolean responseCheck(String answer, int rndNum) {
         if (rndNum % 2 == 0 && answer.equals("yes")) {
             return true;
@@ -57,11 +50,6 @@ public class Greet {
             return false;
         }
         return false;
-    }
-
-    private static int rndNumber() {
-        int rndNum = (int) (Math.random() * 100);
-        return rndNum;
     }
 
     private static String answerQuestions() {
