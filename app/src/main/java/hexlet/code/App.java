@@ -21,6 +21,7 @@ public class App {
                 Greet.greetGame();
                 break;
             case 0:
+                System.out.println("Your choice: Exit");
                 break;
             default:
                 System.out.println("Ввели что-то непотребное!!! - " + gameNumber);
